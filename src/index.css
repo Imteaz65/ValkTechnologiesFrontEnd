@@ -1,0 +1,321 @@
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+
+/* utilityClasses */
+.pt{
+  padding-top: 20px;
+}
+.pb{
+  padding-bottom: 20px;
+}
+.ps{
+  padding-left: 10px;
+}
+.pe{
+  padding-right: 10px;
+}
+
+
+/* css for body */
+body{
+  color: white;
+  font-family: cursive;
+}
+
+
+/* css for overriding bootstrap css */
+.navbar{
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+}
+.custom-navbar {
+  background-color: transparent !important; /* Set background color to transparent */
+  position: absolute;
+  top: 0;
+
+  z-index: 9;
+
+}
+
+.underline{
+  position: relative;
+}
+.underline::before{
+  content: "";
+  position: absolute;
+
+  height: 3px;
+  width: 20px;
+
+  top: 70%;
+  left: 10px;
+
+  border-radius: 20px;
+
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+
+.brandName,.font-gradient{
+
+  background: -webkit-linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* css for carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* background-color: yellow; */
+  height: 100vh;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 100%;
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel img {
+  /* max-width: 100%; */
+  /* height: auto; */
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+/* controlsButtons for carousel */
+.buttons{
+  position: absolute;
+  bottom: 5%;
+  transform: translateY(-5%);
+
+  left: 50%;
+  transform: translateX(-50%) ;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.buttons button{
+  border: none;
+  border-radius: 5px;
+
+  padding: 2px;
+
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+
+
+
+/* css for overview section */
+.overview{
+  width: 40%;
+
+  position: absolute;
+  top: 30%;
+  left: 5%;
+
+  padding-left: 10px;
+}
+
+
+
+/* carousel containingCards */
+.carousel-container{
+
+  position: absolute;
+  
+  left: 50%;
+  top: 30%;
+
+  display: flex;
+  width: 50%;
+
+  overflow: scroll;
+}
+
+
+
+/* cards css */
+.card{
+  margin-right: 5px;
+  /* background-color: rgba(71, 50, 50, 0.747); */
+
+  background-color: rgb(87, 86, 86,0.7);
+
+
+}
+.card .img{
+  height: 290px;
+  width: 220px;
+
+  border-radius: 5px;
+  
+  /* background-color: yellow; */
+}
+.card .cardTitle{
+  position: relative;
+}
+.card .cardTitle::before{
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -5%;
+
+  height: 70%;
+  width: 3px;
+
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+
+  border-radius: 10px;
+
+}
+
+
+
+
+/* css for hiding scrollbar */
+::-webkit-scrollbar{
+  height: 0;
+  width: 0;
+}
+
+
+/* css for pagination */
+.Pagination2{
+  width:3px;
+  height:90%;
+  padding-top: 50%;
+  
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+
+
+  position:absolute;
+  top: 2.5%;
+  left:50%;
+  transform: translateX(-50%);
+
+  border-radius: 2px;
+}
+.dots{
+  height:10px;
+  width:10px;
+  border-radius:50%;
+  
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  position:relative;
+  left:-3px;
+  margin-bottom:20px;
+}
+.dots.active {
+  left: -7px;
+  padding: 7px;
+
+  background-color: white;
+  
+}
+
+
+/* css that shows currentAndTotal pages */
+.currentPageTotalPage{
+  position:absolute;
+  bottom:2%;
+  left: 1.5%;
+
+  transform: rotate(270deg);
+
+  font-size: 14px;
+  font-weight: bolder;
+
+}
+
+
+
+
+
+/* media query for small screen */
+@media only screen and (max-width:540px) {
+
+  .carousel{
+    /* height: 75vh; */
+    height: 100vh;
+  }
+  .carousel img{
+    /* height: 75vh; */
+    height: 100vh;
+  }
+  .card .img{
+    height: 260px;
+    width: 200px;
+  
+    border-radius: 5px;
+    
+    /* background-color: yellow; */
+
+  }
+  
+  .overview{
+    width: 100%;
+    top: 20%;
+    left: 0%;
+    padding-left: 30px;
+    margin-bottom: 20px;
+
+    font-size: 12px;
+  }
+  
+  .carousel-container{
+    margin-top: 20px;
+    position: absolute;
+    
+    left: 10%;
+  
+    top:40%;
+    display: flex;
+    width: 100%;
+
+    padding-right: 100px;
+  
+    overflow: scroll;
+  }
+
+  .white {
+    background-color: white !important; 
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+
+    z-index: 7;
+  
+  }
+  
+}
+
+
+
+/* media query for tabs */
+@media only screen and (max-width:912px){
+
+  .underline{
+    position: relative;
+  }
+  .underline::before{
+    content: "";
+
+  }
+}
